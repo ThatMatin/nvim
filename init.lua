@@ -41,6 +41,7 @@ require("lazy").setup({
     "ErichDonGubler/lsp_lines.nvim",
     "karb94/neoscroll.nvim",
     "unblevable/quick-scope",
+    "lewis6991/gitsigns.nvim",
     {'romgrk/barbar.nvim',
     dependencies = {
         'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status

@@ -1,5 +1,5 @@
 local cmp = require'cmp'
-local cmp_format = require('lsp-zero').cmp_format({details = true})
+local types = require('cmp.types')
 local lspkind = require('lspkind')
 require('luasnip.loaders.from_vscode').lazy_load()
 
@@ -20,14 +20,11 @@ cmp.setup({
     },
 
     mapping = cmp.mapping.preset.insert({
-        ['<C-k>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-j>'] = cmp.mapping.scroll_docs(4),
-        ['<C-Space>'] = cmp.mapping.complete(),
-        ['<C-e>'] = cmp.mapping.abort(),
-        ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-        ['<S-CR>'] = cmp.mapping.select_next_item({
-            behavior = cmp.SelectBehavior.Select
-        }),
+      ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+      ['<C-f>'] = cmp.mapping.scroll_docs(4),
+      ['<C-Space>'] = cmp.mapping.complete(),
+      ['<C-e>'] = cmp.mapping.abort(),
+      ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
 
     sources = cmp.config.sources({
@@ -40,16 +37,42 @@ cmp.setup({
         -- { name = 'ultisnips' }, -- For ultisnips users.
         -- { name = 'snippy' }, -- For snippy users.
     }),
+
     formatting = {
+        expandable_indicator = true,
+        fields = { 'abbr', 'kind', 'menu'},
         format = lspkind.cmp_format({
             mode = 'symbol',
             maxwidth = 50,
             ellipsis_char = '...',
             show_labelDetails = true,
-
-            before = function (entry, vim_item)
-                return vim_item
-            end
+            symbol_map = {
+                Text = "󰉿",
+                Method = "󰆧",
+                Function = "󰊕",
+                Constructor = "",
+                Field = "󰜢",
+                Variable = "󰀫",
+                Class = "󰠱",
+                Interface = "",
+                Module = "",
+                Property = "󰜢",
+                Unit = "󰑭",
+                Value = "󰎠",
+                Enum = "",
+                Keyword = "󰌋",
+                Snippet = "",
+                Color = "󰏘",
+                File = "󰈙",
+                Reference = "󰈇",
+                Folder = "󰉋",
+                EnumMember = "",
+                Constant = "󰏿",
+                Struct = "󰙅",
+                Event = "",
+                Operator = "󰆕",
+                TypeParameter = "",
+            },
         })
     }
 })
