@@ -123,7 +123,7 @@ event = "VeryLazy",
   },
   {
       'mawkler/modicator.nvim',
-      dependencies = 'neanias/everforest-nvim', -- Add your colorscheme plugin here
+      dependencies = 'folke/tokyonight.nvim', -- Add your colorscheme plugin here
       init = function()
           -- These are required for Modicator to work
           vim.o.cursorline = true
@@ -135,8 +135,52 @@ event = "VeryLazy",
       'akinsho/toggleterm.nvim',
       version = "*",
       config = true
+  },
+  {
+      "christoomey/vim-tmux-navigator",
+      cmd = {
+          "TmuxNavigateLeft",
+          "TmuxNavigateDown",
+          "TmuxNavigateUp",
+          "TmuxNavigateRight",
+          "TmuxNavigatePrevious",
+      },
+      keys = {
+          { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+          { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+          { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+          { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
+          { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
+      },
+  },
+  {
+      "folke/noice.nvim",
+      event = "VeryLazy",
+      dependencies = {
+          -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+          "MunifTanjim/nui.nvim",
+          -- OPTIONAL:
+          --   `nvim-notify` is only needed, if you want to use the notification view.
+          --   If not available, we use `mini` as the fallback
+          "rcarriga/nvim-notify",
+      }
+  },
+  {
+      "folke/zen-mode.nvim",
+      opts = {}
+  },
+  {
+      "folke/todo-comments.nvim",
+      dependencies = { "nvim-lua/plenary.nvim" },
+      opts = {}
+  },
+  {
+      "folke/tokyonight.nvim",
+      lazy = false,
+      priority = 1000,
+      opts = {},
   }
 })
 
 vim.opt.termguicolors = true
-vim.cmd('colorscheme everforest')
+vim.cmd('colorscheme tokyonight')
