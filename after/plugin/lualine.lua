@@ -5,7 +5,7 @@ require('lualine').setup {
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
-      statusline = {},
+      statusline = {'NvimTree'},
       winbar = {},
     },
     ignore_focus = {},
@@ -23,7 +23,7 @@ require('lualine').setup {
     lualine_c = {'filename'},
     lualine_x = {'aerial', 'encoding', 'fileformat', 'filetype'},
     lualine_y = {'progress'},
-    lualine_z = {'location'}
+    lualine_z = {'location'},
   },
   inactive_sections = {
     lualine_a = {},

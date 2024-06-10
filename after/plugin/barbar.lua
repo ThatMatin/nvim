@@ -40,10 +40,10 @@ require'barbar'.setup {
     -- Valid options to display the buffer index and -number are `true`, 'superscript' and 'subscript'
     buffer_index = 'superscript',
     -- buffer_number = 'subscript',
-    button = '',
+    button = '📁',
     -- Enables / disables diagnostic symbols
     diagnostics = {
-      [vim.diagnostic.severity.ERROR] = {enabled = true, icon = 'ﬀ'},
+      [vim.diagnostic.severity.ERROR] = {enabled = true, icon = 'E'},
       [vim.diagnostic.severity.WARN] = {enabled = false},
       [vim.diagnostic.severity.INFO] = {enabled = false},
       [vim.diagnostic.severity.HINT] = {enabled = true},
@@ -68,7 +68,7 @@ require'barbar'.setup {
 
     -- Configure the icons on the bufferline when modified or pinned.
     -- Supports all the base icon options.
-    modified = {button = '●'},
+    modified = {button = '📂'},
     pinned = {button = '', filename = true},
 
     -- Use a preconfigured buffer appearance— can be 'default', 'powerline', or 'slanted'

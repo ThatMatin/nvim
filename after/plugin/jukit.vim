@@ -19,17 +19,18 @@ let g:jukit_custom_backend = -1
 "    - Custom matplotlib backend to use
 " You can define a custom split layout as a dictionary, the default is:
 let g:jukit_layout = {
-    \'split': 'vertical',
-    \'p1': 0.4, 
+    \'split': 'horizontal',
+    \'p1': 0.5, 
     \'val': [
         \'file_content',
         \{
             \'split': 'vertical',
-            \'p1': 0.4,
+            \'p1': 0.7,
             \'val': ['output', 'output_history']
         \}
     \]
 \}
+
 
 nnoremap <leader>cS :call jukit#send#line()<cr>
 vnoremap <leader>cS :<C-U>call jukit#send#selection()<cr>

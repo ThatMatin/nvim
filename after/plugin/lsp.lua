@@ -24,5 +24,3 @@ require('mason-lspconfig').setup({
     end,
   },
 })
-
-vim.keymap.set("n","gsig", function() vim.lsp.buf.signature_help() end)
