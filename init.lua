@@ -132,26 +132,26 @@ event = "VeryLazy",
       end
   },
   {
-      'akinsho/toggleterm.nvim',
-      version = "*",
-      config = true
-  },
-  {
       "christoomey/vim-tmux-navigator",
       cmd = {
           "TmuxNavigateLeft",
           "TmuxNavigateDown",
           "TmuxNavigateUp",
           "TmuxNavigateRight",
-          "TmuxNavigatePrevious",
+          -- "TmuxNavigatePrevious",
       },
       keys = {
           { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
           { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
           { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
           { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
-          { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
+          -- { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
       },
+  },
+  {
+      'akinsho/toggleterm.nvim',
+      version = "*",
+      config = true
   },
   {
       "folke/noice.nvim",
@@ -179,6 +179,13 @@ event = "VeryLazy",
       lazy = false,
       priority = 1000,
       opts = {},
+  },
+  {
+      "lervag/vimtex",
+      lazy = false,
+      init = function()
+          vim.g.vimtex_view_method = "zathura"
+      end
   }
 })
 

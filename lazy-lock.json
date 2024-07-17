@@ -47,6 +47,7 @@
   "vim-illuminate": { "branch": "master", "commit": "5eeb7951fc630682c322e88a9bbdae5c224ff0aa" },
   "vim-jukit": { "branch": "master", "commit": "73214c9a8abc4b6aa7a6266b5bc2ddbf8b3e3c00" },
   "vim-tmux-navigator": { "branch": "master", "commit": "5b3c701686fb4e6629c100ed32e827edf8dad01e" },
+  "vimtex": { "branch": "master", "commit": "80c9bc179784c30192d482741a43f176c859daa1" },
   "which-key.nvim": { "branch": "main", "commit": "0099511294f16b81c696004fa6a403b0ae61f7a0" },
   "zen-mode.nvim": { "branch": "main", "commit": "78557d972b4bfbb7488e17b5703d25164ae64e6a" }
 }
