@@ -14,7 +14,7 @@ Welcome to my personal Neovim configuration repository! This README will guide y
 ### 1. Clone this repository
 
 ```sh
-git clone https://github.com/yourusername/neovim-config.git ~/.config/nvim
+git clone https://github.com/ThatMatin/neovim.git ~/.config/nvim
 ```
 
 ### 2. Install Packer
@@ -87,30 +87,6 @@ This configuration includes settings for various plugins and LSP servers. You ca
 - **init.lua**: Main configuration file
 - **packer.lua**: Plugin management file
 - **lsp.lua**: LSP server configurations
-
-Feel free to explore and customize these files to fit your needs.
-
-## Features
-
-- **Enhanced Editing Experience**: Keybindings, auto-completion, and syntax highlighting.
-- **LSP Support**: Built-in support for multiple programming languages.
-- **File Explorer**: Integrated file explorer for easy navigation.
-- **Git Integration**: Git signs and commands within Neovim.
-- **Terminal Integration**: Use Neovim as a terminal emulator.
-- **Debugger**: Full-fledged DAP integration.
-
-## Contributing
-
-If you have any suggestions or improvements, feel free to open an issue or submit a pull request.
-
-## Acknowledgements
-
-- Thanks to all the plugin authors for their amazing work.
-- Special thanks to the Neovim community for continuous support and improvements.
-
----
-
-Happy coding!
 
 If you have any questions or need further assistance, please feel free to reach out.
 
