@@ -14,7 +14,7 @@ Welcome to my personal Neovim configuration repository! This README will guide y
 ### 1. Clone this repository
 
 ```sh
-git clone https://github.com/ThatMatin/neovim.git ~/.config/nvim
+git clone https://github.com/ThatMatin/nvim.git ~/.config/nvim
 ```
 
 ### 2. Install Packer
