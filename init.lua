@@ -30,7 +30,7 @@ require("lazy").setup({
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-buffer",
     "VonHeikemen/lsp-zero.nvim",
-    "/hrsh7th/cmp-nvim-lsp-signature-help",
+    "hrsh7th/cmp-nvim-lsp-signature-help",
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
     "simrat39/symbols-outline.nvim",
@@ -42,6 +42,7 @@ require("lazy").setup({
     "karb94/neoscroll.nvim",
     "unblevable/quick-scope",
     "lewis6991/gitsigns.nvim",
+    "github/copilot.vim",
     {'romgrk/barbar.nvim',
     dependencies = {
         'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
