@@ -1,11 +1,5 @@
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "c", "lua", "vim", "python", "vimdoc", "query" },
+require('nvim-treesitter').install({ "c", "lua", "vim", "python", "vimdoc", "query" })
 
-  sync_install = true,
-
-  auto_install = true,
-
-  highlight = {
-      enable = true,
-  }
-}
+vim.api.nvim_create_autocmd('FileType', {
+  callback = function() pcall(vim.treesitter.start) end,
+})

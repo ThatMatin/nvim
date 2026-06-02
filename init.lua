@@ -1,8 +1,6 @@
 require("set")
 require("remap")
 
-vim.cmd('source ~/AppData/Local/nvim/after/plugin/jukit.vim')
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   vim.fn.system({
@@ -18,7 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     "folke/neodev.nvim",
-    "nvim-treesitter/nvim-treesitter",
+    { "nvim-treesitter/nvim-treesitter", branch = "main", lazy = false, build = ":TSUpdate" },
     "tpope/vim-fugitive",
     "RRethy/vim-illuminate",
     "savq/melange-nvim",
@@ -37,7 +35,6 @@ require("lazy").setup({
     "onsails/lspkind.nvim",
     "rgroli/other.nvim",
     "elihunter173/dirbuf.nvim",
-    "luk400/vim-jukit",
     "ErichDonGubler/lsp_lines.nvim",
     "karb94/neoscroll.nvim",
     "unblevable/quick-scope",
