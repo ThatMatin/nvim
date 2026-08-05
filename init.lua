@@ -20,7 +20,8 @@ require("lazy").setup({
     "tpope/vim-fugitive",
     "RRethy/vim-illuminate",
     "savq/melange-nvim",
-    "ggandor/leap.nvim",
+    -- leap.nvim moved off GitHub to Codeberg
+    { url = "https://codeberg.org/andyg/leap.nvim" },
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
@@ -53,6 +54,9 @@ require("lazy").setup({
 },
 {"kylechui/nvim-surround",
 event = "VeryLazy",
+-- v4 sets its default mappings when the plugin loads; the visual-mode ones are
+-- disabled here and rebound to `ys` in after/plugin/surround.lua
+init = function() vim.g.nvim_surround_no_visual_mappings = true end,
   },
   {
       'nvim-telescope/telescope.nvim',
